@@ -1,0 +1,25 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for(@suggestion) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: 'Enter Title' %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body, placeholder: "Enter Body" %>
+  </div>
+  <div>
+    <%= f.label :author %>
+    <%= f.text_field :author, placeholder: "Your Name" %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

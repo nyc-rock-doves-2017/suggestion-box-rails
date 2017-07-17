@@ -1,0 +1,5 @@
+<ul>
+  <% @suggestions.each do |suggestion| %>
+    <li><%= link_to suggestion.title, suggestion_path(suggestion) %>&mdash;<%= suggestion.author %></li>
+  <% end %> 
+</ul>
